@@ -1,0 +1,21 @@
+1. yea, this threshold gray scale is good, dont need sharpen, it will make noise, bad
+2. value threshold gray scale: 90,91,92,93 ish
+3. use your z, to figure out if a line is a line or a shadow (cause closer to 0, bigger the line width)
+4. however there maybe a shadow that will have same width, if that the case, seek the longer one
+or one that goes / touch the edges of the image
+5. prioritize gate over line (in my mind this work)
+6. maju use activation x based on angle of the line
+7. this simulation cared about physics, but if we put 99m/s vel, it mau, so maybe dont worry to put high number
+8. itu aja dulu
+9. oh iya, ada last n save / checkpoint
+simpen koordinat pose drone (x,y,z,quarter) tiap n detik gitu jika dia pas di garis ok pas di gate
+in short save dron coordinate jika valid
+10. ah save all gate coordinate, for permanent wp (in case 9 ga kuat)
+11. this wp allow the drone to be fast and kalo salah jalan bisa detect, cek aja jaraknya ke previous wp, after lewat wp n detik,
+jadi misal simpen wp x, tunggu n detik, nah baru cek if the drone distance to the wp < then d distance
+if yes, possibly salah jalur
+
+or biar robust, cek juga orientasinya, kalok disekitar that wp maybe ok if rintangan is so close (kek huruf U), oh in that case kecilin radius
+12. to counter kalo salah jalur, turn the drone ke posisi orientasi bener pas wp,
+baru maju ikutin garis lagi
+

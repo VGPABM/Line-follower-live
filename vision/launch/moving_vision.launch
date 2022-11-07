@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+  <node name="track_angle" pkg="vision" type="track_angle.py" output="screen"/>
+  <node name="track_gate" pkg="vision" type="track_gate.py" output="screen"/>
+  <node name="track_H" pkg="vision" type="track_H.py" output="screen"/>
+</launch>
